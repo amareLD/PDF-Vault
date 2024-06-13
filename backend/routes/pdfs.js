@@ -3,6 +3,7 @@ import multer from 'multer';
 import PDF from '../models/PDF.js';
 import { protect } from '../middleware/authMiddleware.js';
 import path from 'path';
+import fs from 'fs';
 
 const router = express.Router();
 
@@ -54,5 +55,36 @@ router.get('/', protect, async (req, res) => {
     res.status(500).json(err.message);
   }
 });
+
+
+
+
+
+
+
+router.get('/:id', protect, async (req, res) => {
+  try {
+    const pdf = await PDF.findById(req.params.id);
+    if (!pdf) return res.status(404).json('PDF not found');
+
+    // Serve the file
+    const filePath = path.resolve(pdf.path);
+    if (fs.existsSync(filePath)) {
+      res.sendFile(filePath);
+    } else {
+      res.status(404).json('File not found');
+    }
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+});
+
+
+
+
+
+
+
+
 
 export default router;

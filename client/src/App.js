@@ -1,20 +1,30 @@
-// src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
 import Home from './pages/Home';
 import PDFViewer from './pages/PDFViewer';
-// import Login from './pages/Login';
 import Login from './pages/Login';
+import NavBar from './components/NavBar';
 import Register from './pages/Register';
+import './styles/global.css';
 import PrivateRoute from './components/PrivateRoute';
+import Footer from './components/Footer';
+import AboutUs from './pages/AboutUs';
 
 const App = () => {
   const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    // Check localStorage for token on component mount
+    const token = localStorage.getItem('token');
+    if (token) {
+      // Set user state if token exists
+      setUser({ token });
+    }
+  }, []);
+
   return (
     <Router>
-      <Header user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} />
       <main>
         <Routes>
           <Route path="/" element={<Home user={user} />} />
@@ -29,8 +39,10 @@ const App = () => {
               </PrivateRoute>
             }
           />
+           <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </main>
+      <Footer/>
     </Router>
   );
 };
