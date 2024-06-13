@@ -1,67 +1,65 @@
 import React from 'react';
-import { FaInstagram, FaTwitter, FaFacebook,FaYoutube,FaPinterest } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
+  FaYoutube,
+  FaPinterest,
+} from 'react-icons/fa';
 //import { AiOutlineInstagram, AiOutlineTwitter, AiOutlineFacebook } from 'react-icons/ai';
 import '../styles/global.css';
-
-
-
 
 const Footer = () => {
   return (
     <>
       <div className="bg-neutral-700 h-96">
-        <div className="z-30 p-5 rounded-xl shadow-xl flex flex-row w-auto relative  h-[20rem] mx-[2rem] justify-around bg-black">
-          <div className="basis-[35] w-full h-full flex flex-col mr-[4rem]">
-            <p className="flex items-center">
-              <span className="text-[2.5rem] font-semibold whitespace-nowrap text-white font-[Lobster]  tracking-[2px]">
+        <div className="z-30 p-5 rounded-xl shadow-xl flex flex-col sm:flex-row w-auto relative h-auto sm:h-[20rem] mx-[2rem] justify-around bg-black">
+          {/* PDFVault */}
+          <div className="basis-full sm:basis-[35] w-full h-full flex flex-col mr-0 sm:mr-[4rem] mb-4 sm:mb-0">
+            <p className="flex items-center justify-center sm:justify-start">
+              <span className="text-[2.5rem] font-semibold whitespace-nowrap text-white font-[Lobster] tracking-[2px]">
                 PDFVault
               </span>
             </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2 mx-1 font-bold">
+            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2 mx-1 font-bold text-center sm:text-left">
               Welcome To PDFVault
             </p>
           </div>
-          <div className="basis-[15] w-full h-full mt-4">
-            <p className="flex items-center">
-              <span className="text-[1rem] font-semibold whitespace-nowrap text-white  tracking-[2px]">
+
+          {/* Quick Links */}
+          <div className="basis-full sm:basis-[15] w-full h-full mt-4 sm:mt-0">
+            <p className="flex items-center justify-center sm:justify-start">
+              <span className="text-[1rem] font-semibold whitespace-nowrap text-white tracking-[2px]">
                 QUICK LINKS
               </span>
             </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-              About
-            </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-              Blog
-            </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-              Contact
-            </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-              FAQ
-            </p>
+            <ul className="text-[#828282] tracking-[1.5px] text-[0.8rem] text-center sm:text-left">
+              <li className="mb-4 mt-2">About</li>
+              <li className="mb-4 mt-2">Blog</li>
+              <li className="mb-4 mt-2">Contact</li>
+              <li className="mb-4 mt-2">FAQ</li>
+            </ul>
           </div>
-          <div className="basis-[15] w-full h-full mt-4">
-            <p className="flex items-center">
-              <span className="text-[1rem] font-semibold whitespace-nowrap text-white  tracking-[2px]">
+
+          {/* Account */}
+          <div className="basis-full sm:basis-[15] w-full h-full mt-4 sm:mt-0">
+            <p className="flex items-center justify-center sm:justify-start">
+              <span className="text-[1rem] font-semibold whitespace-nowrap text-white tracking-[2px]">
                 ACCOUNT
               </span>
             </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-              My Account
-            </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-            security
-            </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-               privacy policy
-            </p>
-            <p className="text-[#828282] tracking-[1.5px] text-[0.8rem] mb-4 mt-2">
-             cookie policy
-            </p>
+            <ul className="text-[#828282] tracking-[1.5px] text-[0.8rem] text-center sm:text-left">
+              <li className="mb-4 mt-2">My Account</li>
+              <li className="mb-4 mt-2">Security</li>
+              <li className="mb-4 mt-2">Privacy Policy</li>
+              <li className="mb-4 mt-2">Cookie Policy</li>
+            </ul>
           </div>
-          <div className="basis-[35] w-full h-full flex flex-col mr-[4rem] leading-[4rem]">
-            <p className="flex items-center">
-              <span className="text-[1rem] font-semibold whitespace-nowrap text-white  tracking-[2px]">
+
+          {/* Newsletter */}
+          <div className="basis-full sm:basis-[35] w-full h-full flex flex-col mr-0 sm:mr-[4rem] leading-[4rem]">
+            <p className="flex items-center justify-center sm:justify-start">
+              <span className="text-[1rem] font-semibold whitespace-nowrap text-white tracking-[2px]">
                 NEWSLETTER
               </span>
             </p>
@@ -74,7 +72,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className=" w-28 h-9 text-white absolute bottom-2 end-2 bg-[#e15b1c] hover:bg-[#bd6f3e] font-medium rounded-[0.2rem] text-sm dark:bg-[#00FFFF] dark:focus:ring-[#00FFFF]"
+                className="w-28 h-9 text-white absolute bottom-2 end-2 bg-[#e15b1c] hover:bg-[#bd6f3e] font-medium rounded-[0.2rem] text-sm dark:bg-[#00FFFF] dark:focus:ring-[#00FFFF]"
               >
                 Subscribe
               </button>

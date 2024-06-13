@@ -60,30 +60,30 @@ const Home = () => {
 
   return (
     <div className="border-4 bg-slate-00 rounded-lg py-5 px-5">
-      <h1 className=" mx-40 p-5 text-center font-extrabold text-5xl text-black rounded-3xl">
+      <h1 className="mx-4 md:mx-40 p-5 text-center font-extrabold text-5xl text-black rounded-3xl">
         Upload & View PDF Online
       </h1>
       {user ? (
         <form
-          className="bg-white px-40 mt-10 rounded-3xl"
+          className="bg-white mx-4 md:mx-40 mt-10 rounded-3xl "
           onSubmit={handleUpload}
         >
           <input
-            className="px-40 py-20 border-4 border-black font-bold text-black text-2xl bg-white rounded-3xl"
+            className="w-full md:mb-5 md:w-8/12 md:mx-2 sm-w-4/12 px-4 py-4 md:py-20 border-4 border-black font-bold text-black text-xl md:text-2xl bg-white rounded-3xl"
             type="file"
             accept="application/pdf"
             onChange={handleFileChange}
           />
           <button
             type="submit"
-            className="bg-black ml-10 border-4 text-2xl border-black font-bold text-white px-20 py-20 rounded-3xl hover:bg-white hover:text-black"
+            className="md:w-3.5/12 md:mx-8  mt-4 md:mt-0 bg-black text-white font-bold text-xl md:text-2xl px-8 md:px-20 py-4 md:py-20 rounded-3xl hover:bg-white hover:text-black border-4 border-black"
           >
             Upload PDF
           </button>
         </form>
       ) : (
         <p className="text-center mt-10 text-red-500 font-bold">
-          Please log in to Reading & upload PDF files
+          Please log in to read and upload PDF files
         </p>
       )}
       <PDFList pdfs={pdfs} />

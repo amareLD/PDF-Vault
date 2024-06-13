@@ -2,7 +2,7 @@ import React from 'react';
 
 const PDFList = ({ pdfs }) => {
   return (
-    <div className="bg-red-00 px-40">
+    <div className=" px-4 md:px-40">
       <h1 className="text-4xl font-semibold pt-5 pb-2">Uploaded PDFs</h1>
       <div className="max-h-80 overflow-y-auto">
         <ul>
@@ -17,13 +17,12 @@ const PDFList = ({ pdfs }) => {
                 rel="noreferrer"
                 className="flex items-center"
               >
-                 <img
-                  src="/pdf.svg" 
+                <img
+                  src="/pdf.svg"
                   alt="PDF Vault"
                   className="cursor-pointer w-5 h-5"
                 />
-                <span className="ml-5">{pdf.title}</span>
-               
+                <span className="ml-3">{pdf.title}</span>
               </a>
             </li>
           ))}
