@@ -22,7 +22,7 @@ Before you begin, ensure you have met the following requirements:
 
 To install PDFVault, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository & running the frontend and backend servers:
 
 ```sh
 git clone https://github.com/amareLD/PDF-Vault/tree/master
